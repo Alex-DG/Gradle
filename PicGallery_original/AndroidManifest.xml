@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.picgallery"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- GridViewActivity -->
+        <activity
+            android:name="com.project.picgallery.GridViewActivity"
+            android:label="@string/app_name" >
+             <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>                
+        </activity>
+        
+         <!-- SearchResultsActivity -->
+        <activity 
+            android:name="com.project.picgallery.SearchResultsActivity"
+            android:label="@string/searchresultsview"
+            android:parentActivityName="com.project.picgallery.GridViewActivity" >            
+
+            <meta-data                
+                android:name="android.support.GridViewActivity"
+                android:value="com.project.picgallery.GridViewActivity"
+                android:resource="@xml/searchable" />                
+        </activity>
+        
+        <!-- FullscreenViewActivity -->
+        <activity
+            android:name="com.project.picgallery.FullScreenViewActivity"
+            android:label="@string/fullscreenview"
+            android:theme="@android:style/Theme.Holo.NoActionBar">
+        </activity>        
+       
+    </application>
+
+</manifest>

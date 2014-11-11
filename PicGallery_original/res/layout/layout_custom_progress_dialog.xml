@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="200dp"
+    android:layout_height="100dp"
+    android:background="@drawable/custom_shape" >
+
+    <ProgressBar
+        android:id="@+id/icon_progressbar"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/prod_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/icon_progressbar"
+        android:text="@string/prod_message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/custom_dim_header"
+        android:textStyle="bold" />
+
+</RelativeLayout>

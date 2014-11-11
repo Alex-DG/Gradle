@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="C:\Users\Alex\Desktop\PicGallery_original\res" >
+            <file
+                name="button_background"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\drawable-hdpi\button_background.xml"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="custom_shape"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\drawable-hdpi\custom_shape.xml"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_search"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\drawable-hdpi\ic_action_search.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\drawable-hdpi\ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="stub"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\drawable-hdpi\stub.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\drawable-mdpi\ic_launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\drawable-xxhdpi\ic_launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="activity_fullscreen_view"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\layout\activity_fullscreen_view.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_gridview"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\layout\activity_gridview.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_gridview_search_results"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\layout\activity_gridview_search_results.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_search_results"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\layout\activity_search_results.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="layout_custom_alert_dialog"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\layout\layout_custom_alert_dialog.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="layout_custom_progress_dialog"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\layout\layout_custom_progress_dialog.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="layout_fullscreen_image"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\layout\layout_fullscreen_image.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="layout_gridview_image"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\layout\layout_gridview_image.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="layout_gridview_image_search_results"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\layout\layout_gridview_image_search_results.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main_actions"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\menu\activity_main_actions.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="main"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\menu\main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\values\color.xml"
+                qualifiers="" >
+                <item
+                    name="darkgray"
+                    type="color">
+#464646
+                </item>
+                <item
+                    name="specialWhite"
+                    type="color">
+#ececec
+                </item>
+
+                <integer-array name="androidcolors" >
+                    <item>
+@color/white
+                    </item>
+                    <item>
+@color/black
+                    </item>
+                    <item>
+@color/darkgray
+                    </item>
+                    <item>
+@color/specialWhite
+                    </item>
+                </integer-array>
+
+                <item
+                    name="white"
+                    type="color">
+#FFFFFF
+                </item>
+                <item
+                    name="black"
+                    type="color">
+#000000
+                </item>
+            </file>
+            <file
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\values\dimens.xml"
+                qualifiers="" >
+                <dimen name="custom_dim_header" >20dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="custom_dim_content" >18dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\values\strings.xml"
+                qualifiers="" >
+                <string name="prod_message" >Data loading...
+                </string>
+                <string name="searchresultsview" >Search results
+                </string>
+                <string name="ad_title" >Search error
+                </string>
+                <string name="button_close_label" >Close
+                </string>
+                <string name="action_settings" >Settings
+                </string>
+                <string name="app_name" >PicGallery
+                </string>
+                <string name="ad_message" > No such picture found.
+                </string>
+                <string name="action_search" >Search
+                </string>
+                <string name="search_hint" >Search tag
+                </string>
+                <string name="ad_buttonLabel" >OK
+                </string>
+                <string name="fullscreenview" >Fullscreen
+                </string>
+            </file>
+            <file
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\values\styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppTheme"
+                    parent="AppBaseTheme" >
+
+                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+                </style>
+
+                <style
+                    name="CustomDialog"
+                    parent="@android:style/Theme.Dialog" >
+                    <item name="android:background">
+#464646
+                    </item>
+                </style>
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
+                </style>
+            </file>
+            <file
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\values-sw720dp-land\dimens.xml"
+                qualifiers="sw720dp-land-v13" >
+                <dimen name="activity_horizontal_margin" >128dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\values-v11\styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light" >
+
+                    <!-- API 11 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\values-v14\styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" >
+
+                    <!-- API 14 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                name="searchable"
+                path="C:\Users\Alex\Desktop\PicGallery_original\res\xml\searchable.xml"
+                qualifiers=""
+                type="xml" />
+        </source>
+        <source path="C:\Users\Alex\Desktop\PicGallery_original\build\generated\res\rs\release" />
+        <source path="C:\Users\Alex\Desktop\PicGallery_original\build\generated\res\generated\release" />
+    </dataSet>
+    <dataSet config="release" >
+        <source path="C:\Users\Alex\Desktop\PicGallery_original\build-types\release\res" />
+    </dataSet>
+
+</merger>

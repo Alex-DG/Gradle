@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\Users\Alex\Desktop\PicGallery_original\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.1-with-sources-431d710772ba49e7127df7e6f54f5dcfb7dcb7b7.jar"
+        jar="C:\Users\Alex\Desktop\PicGallery_original\libs\universal-image-loader-1.9.1-with-sources.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="d2a1c7db3817af8381daa80201bc549be3e884c5"/>
+    <item
+        dex="C:\Users\Alex\Desktop\PicGallery_original\build\intermediates\pre-dexed\debug\android-support-v4-5d3197e1e26f04444d23f13950612bdacd6dd6a1.jar"
+        jar="C:\Users\Alex\Desktop\PicGallery_original\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="db0f122c99ef9f90dbab3fada6d191f2880cbb8e"/>
+
+</pre-dex-items>

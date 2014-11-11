@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MainActivity -->
+    <string name="app_name">PicGallery</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- Childs Activities -->
+    <string  name="fullscreenview">Fullscreen</string>
+    <string  name="searchresultsview">Search results</string>
+    
+    <!-- FullScreenView button -->    
+    <string name="button_close_label">Close</string>
+    
+    <!-- Action Bar action items -->
+    <string name="action_search">Search</string>    
+    <!-- Search  -->
+    <string name="search_hint">Search tag</string>
+    
+    <!-- Alert Dialog -->
+    <string name="ad_title">Search error</string>
+    <string name="ad_message"> No such picture found.</string>
+    <string name="ad_buttonLabel">OK</string>
+    
+    <!-- Progress dialog -->
+    <string name="prod_message">Data loading...</string>
+    
+    
+</resources>
