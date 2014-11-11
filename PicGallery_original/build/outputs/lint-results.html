@@ -18,10 +18,14 @@ document.getElementById(id+'Link').style.display = 'none';
 <body>
 <h1>Lint Report</h1>
 <div class="titleSeparator"></div>
-Check performed at Tue Nov 11 10:02:09 CET 2014.<br/>
-0 errors and 25 warnings found:<br/><br/>
+Check performed at Tue Nov 11 10:32:16 CET 2014.<br/>
+3 errors and 30 warnings found:<br/><br/>
 <table class="overview">
 <tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
+</td></tr>
+<tr>
+<td class="countColumn">3</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#MissingRegistered">MissingRegistered: Missing registered class</a>
 </td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
@@ -34,10 +38,6 @@ Check performed at Tue Nov 11 10:02:09 CET 2014.<br/>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
 <a href="#UnusedAttribute">UnusedAttribute: Attribute unused on older versions</a>
-</td></tr>
-<tr>
-<td class="countColumn">4</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
-<a href="#InflateParams">InflateParams: Layout Inflation without a Parent</a>
 </td></tr>
 <tr>
 <td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
@@ -54,7 +54,7 @@ Check performed at Tue Nov 11 10:02:09 CET 2014.<br/>
 <a href="#Overdraw">Overdraw: Overdraw: Painting regions more than once</a>
 </td></tr>
 <tr>
-<td class="countColumn">4</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<td class="countColumn">13</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
 <a href="#UnusedResources">UnusedResources: Unused resources</a>
 </td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#Usability:Typography">Usability:Typography</a>
@@ -81,6 +81,46 @@ Check performed at Tue Nov 11 10:02:09 CET 2014.<br/>
 <a name="Correctness"></a>
 <div class="category"><a href="#" title="Return to top">Correctness</a><div class="categorySeparator"></div>
 </div>
+<a name="MissingRegistered"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">MissingRegistered: Missing registered class</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../AndroidManifest.xml">../../AndroidManifest.xml</a>:23</span>: <span class="message">Class referenced in the manifest, com.project.picgallery.GridViewActivity, was not found in the project or the libraries</span><br /><pre class="errorlines">
+<span class="lineno">  20</span>         android:theme="@style/AppTheme" >
+<span class="lineno">  21</span>         
+<span class="lineno">  22</span>         &lt;!-- GridViewActivity -->
+<span class="lineno">  23</span>         <span class="errorspan">&lt;activity</span>
+<span class="lineno">  24</span>             android:name="com.project.picgallery.GridViewActivity"
+<span class="lineno">  25</span>             android:label="@string/app_name" >
+</pre>
+<span class="location"><a href="../../AndroidManifest.xml">../../AndroidManifest.xml</a>:37</span>: <span class="message">Class referenced in the manifest, com.project.picgallery.SearchResultsActivity, was not found in the project or the libraries</span><br /><pre class="errorlines">
+<span class="lineno">  34</span>         &lt;/activity>
+<span class="lineno">  35</span>         
+<span class="lineno">  36</span>          &lt;!-- SearchResultsActivity -->
+<span class="lineno">  37</span>         <span class="errorspan">&lt;activity </span>
+<span class="lineno">  38</span>             android:name="com.project.picgallery.SearchResultsActivity"
+<span class="lineno">  39</span>             android:label="@string/searchresultsview"
+</pre>
+<span class="location"><a href="../../AndroidManifest.xml">../../AndroidManifest.xml</a>:49</span>: <span class="message">Class referenced in the manifest, com.project.picgallery.FullScreenViewActivity, was not found in the project or the libraries</span><br /><pre class="errorlines">
+<span class="lineno">  46</span>         &lt;/activity>
+<span class="lineno">  47</span>         
+<span class="lineno">  48</span>         &lt;!-- FullscreenViewActivity -->
+<span class="lineno">  49</span>         <span class="errorspan">&lt;activity</span>
+<span class="lineno">  50</span>             android:name="com.project.picgallery.FullScreenViewActivity"
+<span class="lineno">  51</span>             android:label="@string/fullscreenview"
+</pre>
+</div>
+<div class="metadata">Priority: 8 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Ensures that classes referenced in the manifest are present in the project or libraries.</div>
+<div class="explanation">
+If a class is referenced in the manifest, it must also exist in the project (or in one of the libraries included by the project. This check helps uncover typos in registration names, or attempts to rename or move classes without updating the manifest file properly.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">http://developer.android.com/guide/topics/manifest/manifest-intro.html</a>
+</div><br/>To suppress this error, use the issue id "MissingRegistered" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
 <a name="GradleDeprecated"></a>
 <div class="issue">
 <div class="id"><a href="#" title="Return to top">GradleDeprecated: Deprecated Gradle Construct</a><div class="issueSeparator"></div>
@@ -92,7 +132,7 @@ Check performed at Tue Nov 11 10:02:09 CET 2014.<br/>
 <span class="lineno">   8</span> }
 <span class="lineno">   9</span> <span class="errorspan">apply plugin: 'android'</span>
 <span class="lineno">  10</span> 
-<span class="lineno">  11</span> dependencies {
+<span class="lineno">  11</span> repositories {
 </pre>
 </div>
 <div class="metadata">Priority: 6 / 10<br/>
@@ -154,54 +194,6 @@ This check finds attributes set in XML files that were introduced in a version n
 This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedAttribute" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-</div>
-<a name="InflateParams"></a>
-<div class="issue">
-<div class="id"><a href="#" title="Return to top">InflateParams: Layout Inflation without a Parent</a><div class="issueSeparator"></div>
-</div>
-<div class="warningslist">
-<span class="location"><a href="../../src/com/project/picgallery/adapter/GridViewImageAdapter.java">../../src/com/project/picgallery/adapter/GridViewImageAdapter.java</a>:80</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno">  77</span>     	ViewHolder holder;
-<span class="lineno">  78</span> 
-<span class="lineno">  79</span>         if (convertView == null) {
-<span class="lineno">  80</span>             convertView = myInflater.inflate(R.layout.layout_gridview_image, <span class="errorspan">null);</span>
-<span class="lineno">  81</span>             holder = new ViewHolder();
-<span class="lineno">  82</span>             holder.preview = (ImageView) convertView.findViewById(R.id.grid_item_image);
-</pre>
-<span class="location"><a href="../../src/com/project/picgallery/adapter/GridViewImageSearchResultsAdapter.java">../../src/com/project/picgallery/adapter/GridViewImageSearchResultsAdapter.java</a>:80</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno">  77</span>     	ViewHolder holder;
-<span class="lineno">  78</span> 
-<span class="lineno">  79</span>         if (convertView == null) {
-<span class="lineno">  80</span>             convertView = myInflater.inflate(R.layout.layout_gridview_image, <span class="errorspan">null);</span>
-<span class="lineno">  81</span>             holder = new ViewHolder();
-<span class="lineno">  82</span>             holder.preview = (ImageView) convertView.findViewById(R.id.grid_item_image);
-</pre>
-<span class="location"><a href="../../src/com/project/picgallery/fragment/NoPicFoundDialogFragment.java">../../src/com/project/picgallery/fragment/NoPicFoundDialogFragment.java</a>:25</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno">  22</span> 
-<span class="lineno">  23</span>         // Get the layout inflater
-<span class="lineno">  24</span>         LayoutInflater inflater = getActivity().getLayoutInflater();
-<span class="lineno">  25</span>         builder.setView(inflater.inflate(R.layout.layout_custom_alert_dialog, <span class="errorspan">null))</span>
-<span class="lineno">  26</span>                .setPositiveButton(R.string.ad_buttonLabel, new DialogInterface.OnClickListener() {
-<span class="lineno">  27</span>             	   
-</pre>
-<span class="location"><a href="../../src/com/project/picgallery/helper/Utils.java">../../src/com/project/picgallery/helper/Utils.java</a>:79</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno">  76</span>      */
-<span class="lineno">  77</span>     public AlertDialog callProgressDialog(){
-<span class="lineno">  78</span>     	AlertDialog.Builder builder = new AlertDialog.Builder(_context);    	
-<span class="lineno">  79</span>     	View progressView = LayoutInflater.from(_context).inflate(R.layout.layout_custom_progress_dialog, <span class="errorspan">null);</span>
-<span class="lineno">  80</span>     	builder.setView(progressView);    	
-<span class="lineno">  81</span>     	
-</pre>
-</div>
-<div class="metadata">Priority: 5 / 10<br/>
-Category: Correctness</div>
-Severity: <span class="warning">Warning</span><div class="summary">
-Explanation: Ensures that a proper parent context is passed to a layout inflater.</div>
-<div class="explanation">
-When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored.
-</div>
-<br/><div class="moreinfo">More info: <a href="http://www.doubleencore.com/2013/05/layout-inflation-as-intended">http://www.doubleencore.com/2013/05/layout-inflation-as-intended</a>
-</div><br/>To suppress this error, use the issue id "InflateParams" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="SpUsage"></a>
 <div class="issue">
@@ -340,7 +332,13 @@ Of course it's possible that your custom drawable is translucent and you want it
 <div class="id"><a href="#" title="Return to top">UnusedResources: Unused resources</a><div class="issueSeparator"></div>
 </div>
 <div class="warningslist">
+<span class="location"><a href="../../res/layout/activity_fullscreen_view.xml">../../res/layout/activity_fullscreen_view.xml</a></span>: <span class="message">The resource R.layout.activity_fullscreen_view appears to be unused</span><br />
+<span class="location"><a href="../../res/layout/activity_gridview.xml">../../res/layout/activity_gridview.xml</a></span>: <span class="message">The resource R.layout.activity_gridview appears to be unused</span><br />
+<span class="location"><a href="../../res/layout/activity_gridview_search_results.xml">../../res/layout/activity_gridview_search_results.xml</a></span>: <span class="message">The resource R.layout.activity_gridview_search_results appears to be unused</span><br />
+<span class="location"><a href="../../res/menu/activity_main_actions.xml">../../res/menu/activity_main_actions.xml</a></span>: <span class="message">The resource R.menu.activity_main_actions appears to be unused</span><br />
 <span class="location"><a href="../../res/layout/activity_search_results.xml">../../res/layout/activity_search_results.xml</a></span>: <span class="message">The resource R.layout.activity_search_results appears to be unused</span><br />
+<button id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 8 More Occurrences...</button>
+<div id="UnusedResourcesDiv" style="display: none">
 <span class="location"><a href="../../res/values/color.xml">../../res/values/color.xml</a>:8</span>: <span class="message">The resource R.array.androidcolors appears to be unused</span><br /><pre class="errorlines">
 <span class="lineno">   5</span>  	&lt;item name="darkgray" type="color">#464646&lt;/item>
 <span class="lineno">   6</span>  	&lt;item name="specialWhite" type="color">#ececec&lt;/item>
@@ -349,8 +347,21 @@ Of course it's possible that your custom drawable is translucent and you want it
 <span class="lineno">   9</span>         &lt;item>@color/white&lt;/item>
 <span class="lineno">  10</span>         &lt;item>@color/black&lt;/item>
 </pre>
+<span class="location"><a href="../../res/layout/layout_custom_alert_dialog.xml">../../res/layout/layout_custom_alert_dialog.xml</a></span>: <span class="message">The resource R.layout.layout_custom_alert_dialog appears to be unused</span><br />
+<span class="location"><a href="../../res/layout/layout_custom_progress_dialog.xml">../../res/layout/layout_custom_progress_dialog.xml</a></span>: <span class="message">The resource R.layout.layout_custom_progress_dialog appears to be unused</span><br />
+<span class="location"><a href="../../res/layout/layout_fullscreen_image.xml">../../res/layout/layout_fullscreen_image.xml</a></span>: <span class="message">The resource R.layout.layout_fullscreen_image appears to be unused</span><br />
+<span class="location"><a href="../../res/layout/layout_gridview_image.xml">../../res/layout/layout_gridview_image.xml</a></span>: <span class="message">The resource R.layout.layout_gridview_image appears to be unused</span><br />
 <span class="location"><a href="../../res/layout/layout_gridview_image_search_results.xml">../../res/layout/layout_gridview_image_search_results.xml</a></span>: <span class="message">The resource R.layout.layout_gridview_image_search_results appears to be unused</span><br />
 <span class="location"><a href="../../res/menu/main.xml">../../res/menu/main.xml</a></span>: <span class="message">The resource R.menu.main appears to be unused</span><br />
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:23</span>: <span class="message">The resource R.string.ad_buttonLabel appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  20</span>     &lt;!-- Alert Dialog -->
+<span class="lineno">  21</span>     &lt;string name="ad_title">Search error&lt;/string>
+<span class="lineno">  22</span>     &lt;string name="ad_message"> No such picture found.&lt;/string>
+<span class="lineno">  23</span>     &lt;string <span class="errorspan">name="ad_buttonLabel">OK&lt;/string></span>
+<span class="lineno">  24</span>     
+<span class="lineno">  25</span>     &lt;!-- Progress dialog -->
+</pre>
+</div>
 </div>
 <div class="metadata">Priority: 3 / 10<br/>
 Category: Performance</div>

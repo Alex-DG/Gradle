@@ -2,6 +2,60 @@
 <issues format="4" by="lint 23.0.5">
 
     <issue
+        id="MissingRegistered"
+        severity="Error"
+        message="Class referenced in the manifest, com.project.picgallery.GridViewActivity, was not found in the project or the libraries"
+        category="Correctness"
+        priority="8"
+        summary="Ensures that classes referenced in the manifest are present in the project or libraries"
+        explanation="If a class is referenced in the manifest, it must also exist in the project (or in one of the libraries included by the project. This check helps uncover typos in registration names, or attempts to rename or move classes without updating the manifest file properly."
+        url="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        urls="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        errorLine1="        &lt;activity"
+        errorLine2="        ^">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\AndroidManifest.xml"
+            line="23"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="MissingRegistered"
+        severity="Error"
+        message="Class referenced in the manifest, com.project.picgallery.SearchResultsActivity, was not found in the project or the libraries"
+        category="Correctness"
+        priority="8"
+        summary="Ensures that classes referenced in the manifest are present in the project or libraries"
+        explanation="If a class is referenced in the manifest, it must also exist in the project (or in one of the libraries included by the project. This check helps uncover typos in registration names, or attempts to rename or move classes without updating the manifest file properly."
+        url="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        urls="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        errorLine1="        &lt;activity "
+        errorLine2="        ^">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\AndroidManifest.xml"
+            line="37"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="MissingRegistered"
+        severity="Error"
+        message="Class referenced in the manifest, com.project.picgallery.FullScreenViewActivity, was not found in the project or the libraries"
+        category="Correctness"
+        priority="8"
+        summary="Ensures that classes referenced in the manifest are present in the project or libraries"
+        explanation="If a class is referenced in the manifest, it must also exist in the project (or in one of the libraries included by the project. This check helps uncover typos in registration names, or attempts to rename or move classes without updating the manifest file properly."
+        url="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        urls="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        errorLine1="        &lt;activity"
+        errorLine2="        ^">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\AndroidManifest.xml"
+            line="49"
+            column="9"/>
+    </issue>
+
+    <issue
         id="GradleDeprecated"
         severity="Warning"
         message="&apos;android&apos; is deprecated; use &apos;com.android.application&apos; instead"
@@ -53,78 +107,6 @@ This is not an error; the application will simply ignore the attribute. However,
             file="C:\Users\Alex\Desktop\PicGallery_original\AndroidManifest.xml"
             line="40"
             column="13"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Ensures that a proper parent context is passed to a layout inflater"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="            convertView = myInflater.inflate(R.layout.layout_gridview_image, null);"
-        errorLine2="                                                                             ~~~~">
-        <location
-            file="C:\Users\Alex\Desktop\PicGallery_original\src\com\project\picgallery\adapter\GridViewImageAdapter.java"
-            line="80"
-            column="78"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Ensures that a proper parent context is passed to a layout inflater"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="            convertView = myInflater.inflate(R.layout.layout_gridview_image, null);"
-        errorLine2="                                                                             ~~~~">
-        <location
-            file="C:\Users\Alex\Desktop\PicGallery_original\src\com\project\picgallery\adapter\GridViewImageSearchResultsAdapter.java"
-            line="80"
-            column="78"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Ensures that a proper parent context is passed to a layout inflater"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="        builder.setView(inflater.inflate(R.layout.layout_custom_alert_dialog, null))"
-        errorLine2="                                                                              ~~~~">
-        <location
-            file="C:\Users\Alex\Desktop\PicGallery_original\src\com\project\picgallery\fragment\NoPicFoundDialogFragment.java"
-            line="25"
-            column="79"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Ensures that a proper parent context is passed to a layout inflater"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="     View progressView = LayoutInflater.from(_context).inflate(R.layout.layout_custom_progress_dialog, null);"
-        errorLine2="                                                                                                       ~~~~">
-        <location
-            file="C:\Users\Alex\Desktop\PicGallery_original\src\com\project\picgallery\helper\Utils.java"
-            line="79"
-            column="104"/>
     </issue>
 
     <issue
@@ -285,6 +267,54 @@ Of course it&apos;s possible that your custom drawable is translucent and you wa
     <issue
         id="UnusedResources"
         severity="Warning"
+        message="The resource R.layout.activity_fullscreen_view appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\res\layout\activity_fullscreen_view.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.activity_gridview appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\res\layout\activity_gridview.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.activity_gridview_search_results appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\res\layout\activity_gridview_search_results.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.menu.activity_main_actions appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\res\menu\activity_main_actions.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
         message="The resource R.layout.activity_search_results appears to be unused"
         category="Performance"
         priority="3"
@@ -313,6 +343,54 @@ Of course it&apos;s possible that your custom drawable is translucent and you wa
     <issue
         id="UnusedResources"
         severity="Warning"
+        message="The resource R.layout.layout_custom_alert_dialog appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\res\layout\layout_custom_alert_dialog.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.layout_custom_progress_dialog appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\res\layout\layout_custom_progress_dialog.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.layout_fullscreen_image appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\res\layout\layout_fullscreen_image.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.layout_gridview_image appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\res\layout\layout_gridview_image.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
         message="The resource R.layout.layout_gridview_image_search_results appears to be unused"
         category="Performance"
         priority="3"
@@ -332,6 +410,22 @@ Of course it&apos;s possible that your custom drawable is translucent and you wa
         explanation="Unused resources make applications larger and slow down builds.">
         <location
             file="C:\Users\Alex\Desktop\PicGallery_original\res\menu\main.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.ad_buttonLabel appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ad_buttonLabel&quot;>OK&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Alex\Desktop\PicGallery_original\res\values\strings.xml"
+            line="23"
+            column="13"/>
     </issue>
 
     <issue
